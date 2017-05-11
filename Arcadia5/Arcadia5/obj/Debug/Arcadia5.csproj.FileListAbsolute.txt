@@ -17,3 +17,4 @@ C:\Users\jdsco\Documents\Visual Studio 2017\Projects\Arcadia5\Arcadia5\obj\Debug
 C:\Users\jdsco\Documents\Visual Studio 2017\Projects\Arcadia5\Arcadia5\obj\Debug\Arcadia5.exe
 C:\Users\jdsco\Documents\Visual Studio 2017\Projects\Arcadia5\Arcadia5\obj\Debug\Arcadia5.pdb
 C:\Users\jdsco\Documents\Visual Studio 2017\Projects\Arcadia5\Arcadia5\obj\Debug\Arcadia5.BatchCommander.resources
+C:\Users\jdsco\Documents\Visual Studio 2017\Projects\Arcadia5\Arcadia5\obj\Debug\Arcadia5.frmAuto.resources
