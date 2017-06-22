@@ -72,8 +72,7 @@ namespace Arcadia5
                             progSite = node.LastChild.PreviousSibling.InnerText;
                             pbxIcon.ImageLocation = node.LastChild.InnerText;
                         }
-                        if (btnAR.Checked)
-                            newAuto.addProg(node);
+                       
                     }
                 }
                 catch (Exception r)
@@ -99,6 +98,7 @@ namespace Arcadia5
                             ProcessStartInfo startInfo = new ProcessStartInfo();
                             startInfo.FileName = node.FirstChild.NextSibling.InnerText;
                             System.Diagnostics.Process.Start(startInfo);
+                            addLog(lbxProgs.SelectedItem.ToString());
                         }
                     }
                 }
@@ -109,6 +109,31 @@ namespace Arcadia5
             }
         }
 
+        private void addLog(String l)
+        {
+            try
+            {
+                if (!File.Exists(logPath))
+                {
+                    // Create a file to write to.
+                    using (StreamWriter sw = File.CreateText(logPath))
+                    {
+                        sw.WriteLine(l);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter ss = File.AppendText(logPath))
+                    {
+                        ss.WriteLine(l);
+                    }
+                }
+            }
+            catch (Exception z)
+            {
+                MessageBox.Show("Unable to Write Log File");
+            }
+        }
         private void btnAM_Click(object sender, EventArgs e)
         {
             reset();
@@ -251,19 +276,67 @@ namespace Arcadia5
                 }
             }
         }
-        private bool autoMode;
-        frmAuto newAuto = new frmAuto();
+      
+        private string logPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Arcadia.txt";
 
         private void btnAR_CheckedChanged(object sender, EventArgs e)
         {
-            if(btnAR.Checked)
-            {
-                newAuto.Visible = true;
-            }
+          
+        }
+
+        private void btnAuto_Click(object sender, EventArgs e)
+        {
+            DialogResult dia = MessageBox.Show("Auto Run About To Begin", "Auto Run", MessageBoxButtons.OKCancel);
+            if (dia == DialogResult.Cancel)
+            { }
             else
             {
-                newAuto.Visible = false;
+                try
+                {
+                    foreach (XmlNode node in doc.DocumentElement)
+                    {
+                        if (node.Attributes[1].InnerText == "VIPRE Rescue")
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo();
+                            startInfo.FileName = node.FirstChild.NextSibling.InnerText;
+                            System.Diagnostics.Process.Start(startInfo);
+                        }
+                        if (node.Attributes[1].InnerText == "Emsisoft Emergency Kit")
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo();
+                            startInfo.FileName = node.FirstChild.NextSibling.InnerText;
+                            System.Diagnostics.Process.Start(startInfo);
+                        }
+                        if (node.Attributes[1].InnerText == "Malwarebytes Antimalware")
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo();
+                            startInfo.FileName = node.FirstChild.NextSibling.InnerText;
+                            System.Diagnostics.Process.Start(startInfo);
+                        }
+                        if (node.Attributes[1].InnerText == "Super Antispyware")
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo();
+                            startInfo.FileName = node.FirstChild.NextSibling.InnerText;
+                            System.Diagnostics.Process.Start(startInfo);
+                        }
+                    }
+                    String alog = "\n....Auto Scan....\nVipre Rescue\nEmsisoft Emergency Kit\nMalwarebytes Antimalware\nSuper Antispyware\n....Auto Scan....\n".Replace("\n", Environment.NewLine);
+                    addLog(alog);
+                
+                }
+
+
+                catch (Exception r)
+                {
+                    MessageBox.Show("whaa?");
+                }
             }
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            frmLogs mylogs = new frmLogs();
+            mylogs.Visible = true;
         }
     }
 }

@@ -99,8 +99,8 @@ namespace Arcadia5
         //Opens SysInternals Suite folder
         private void btnsys_Click(object sender, EventArgs e)
         {
-            if (System.IO.Directory.Exists(@"SysinternalsSuite"))
-                Process.Start(@"SysinternalsSuite");
+            if (System.IO.Directory.Exists(@"Programs\Tools\SysinternalsSuite"))
+                Process.Start(@"Programs\Tools\SysinternalsSuite");
             else
                 MessageBox.Show("Programs missing. Update application before proceeding.");
         }
