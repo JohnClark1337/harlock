@@ -29,3 +29,14 @@ C:\Users\Jonathon\Downloads\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.
 C:\Users\Jonathon\Downloads\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.exe
 C:\Users\Jonathon\Downloads\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.pdb
 C:\Users\Jonathon\Downloads\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.frmLogs.resources
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\bin\Debug\Arcadia5.exe.config
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\bin\Debug\Arcadia5.exe
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\bin\Debug\Arcadia5.pdb
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.csprojResolveAssemblyReference.cache
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.BatchCommander.resources
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.frmMain.resources
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.frmLogs.resources
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.Properties.Resources.resources
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.csproj.GenerateResource.Cache
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.exe
+C:\Users\Jonathon\Documents\harlock-master\Arcadia5\Arcadia5\obj\Debug\Arcadia5.pdb

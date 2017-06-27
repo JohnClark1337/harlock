@@ -24,7 +24,20 @@ namespace Arcadia5
             reset();
             try
             {
+
+                if (File.Exists("Programs.xml") && Directory.Exists("Programs"))
                 doc.Load("Programs.xml");
+                else if(!File.Exists("Programs.xml"))
+                {
+                    MessageBox.Show("Cannot Load Programs List.");
+                    this.Enabled = false;
+                }
+                else if(!Directory.Exists("Programs"))
+                {
+                    MessageBox.Show("Programs folder not found");
+                    this.Enabled = false;
+                 
+                }
                
 
               
@@ -32,7 +45,7 @@ namespace Arcadia5
             catch (Exception x)
             {
                 MessageBox.Show("Cannot Load Program List.");
-                Application.Exit();
+               
             };
             MessageBox.Show("This program is designed to launch software created by many other hard working programmers. By continuing to use this software you are confirming that you have a knowledge of how and when to use these tools, and understand that each tool may have its own licensing agreement. I cannot be held responsible for any damage that may occur to your machine either through use or misuse of these tools.", "Arcadia Legalese");
         }
